@@ -20,12 +20,7 @@ module.exports = {
       "error",
       "always"
     ],
-    "func-call-spacing": ["error",
-      "never",
-      {
-        "allowNewlines": true
-      }
-    ],
+    "wrap-iife" : ["error", "inside"],
     "no-console": "off"
   };
 };

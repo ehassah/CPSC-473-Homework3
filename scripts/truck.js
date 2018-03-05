@@ -26,6 +26,8 @@ Truck.prototype.printOrders = function(){
   }.bind(this));
 };
 
+//make payment
+
   App.Truck = Truck;
   window.App = App;
 })(window);
