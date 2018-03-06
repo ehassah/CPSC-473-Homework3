@@ -1,4 +1,4 @@
-(function (window){
+(function(window) {
   "use strict";
   var App = window.App || {};
   var $ = window.jQuery;
@@ -15,8 +15,8 @@
     }
   }
 
-  CheckList.prototype.addClickHandler = function(fn){
-    this.$element.on("click", "input", function(event){
+  CheckList.prototype.addClickHandler = function(fn) {
+    this.$element.on("click", "input", function(event) {
       var email = event.target.value;
       this.removeRow(email);
       fn(email);
@@ -35,11 +35,11 @@
     this.$element.append(rowElement.$element);
   };
 
-  CheckList.prototype.removeRow = function (email) {
-    this.$element.find("[value=\""+email+"\"]")
-    .closest("[data-coffee-order=\"checkbox\"]")
-    .remove();
-  }
+  CheckList.prototype.removeRow = function(email) {
+    this.$element.find("[value=\"" + email + "\"]")
+      .closest("[data-coffee-order=\"checkbox\"]")
+      .remove();
+  };
 
   function Row(coffeeOrder) {
     var $div = $("<div></div>", {
@@ -49,7 +49,7 @@
 
     var $label = $("<label></label>");
 
-    var $checkbox = $("<input></input>",{
+    var $checkbox = $("<input></input>", {
       type: "checkbox",
       value: coffeeOrder.emailAddress
     });

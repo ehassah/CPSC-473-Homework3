@@ -44,10 +44,10 @@
       }
       var name = "Thank you for your payment, " + title + " " + nameOfUser;
       console.log(name);
-      document.getElementById('displayContent').innerHTML = name;
+      document.getElementById("displayContent").innerHTML = name;
       $("#ex1").show();
     });
-  }
+  };
 
   App.FormHandler = FormHandler;
   window.App = App;
