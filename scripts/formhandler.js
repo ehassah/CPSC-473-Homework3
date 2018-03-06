@@ -34,7 +34,18 @@
   FormHandler.prototype.addPaymentSubmitHandler = function() {
     this.$formElement.on("submit", function(event) {
       event.preventDefault();
-      console.log("Payment");
+
+      var nameOfUser = document.getElementById("name").value;
+      var title;
+      if (document.getElementById("title_1").checked) {
+        title = document.getElementById("title_1").value;
+      } else {
+        title = document.getElementById("title_2").value;
+      }
+      var name = "Thank you for your payment, " + title + " " + nameOfUser;
+      console.log(name);
+      document.getElementById('displayContent').innerHTML = name;
+      $("#ex1").show();
     });
   }
 

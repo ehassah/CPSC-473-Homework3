@@ -1,6 +1,7 @@
 module.exports = {
   "env": {
-    "browser": true
+    "browser": true,
+    "no-console": "off"
   },
   "extends": "eslint:recommended",
   "rules": {
@@ -19,8 +20,6 @@ module.exports = {
     "semi": [
       "error",
       "always"
-    ],
-    "wrap-iife" : ["error", "inside"],
-    "no-console": "off"
+    ]
   };
 };
